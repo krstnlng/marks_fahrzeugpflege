@@ -1,0 +1,125 @@
+::ng-deep .mdc-tab--active {
+  color: #eb3324;
+}
+
+.tab-content-container {
+  padding: 20px;
+  justify-content: center;
+}
+
+.review-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.request-container {
+  display: flex;
+  gap: 20px;
+  width: 30vw;
+}
+
+.request {
+  flex: auto;
+}
+
+.conclusion {
+  flex: auto;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.table-container {
+  padding: 20px 250px;
+}
+
+table {
+  background-color: rgb(245, 245, 245);
+  border-collapse: collapse;
+  border-radius: 15px; /* Hier kannst du den Radius anpassen */
+  overflow: hidden;
+}
+
+::ng-deep .mat-calendar-body-cell-content.mat-calendar-body-disabled {
+  color: #ccc;
+  pointer-events: none;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  width: 25vw !important;
+}
+
+.container-test {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+}
+
+// .arrow {
+//   font-size: 30px;
+//   cursor: pointer;
+//   margin-top: 10px;
+// }
+
+// .arrow.left {
+//   margin-right: 20px;
+// }
+
+// .arrow.right {
+//   margin-left: 20px;
+// }
+
+.slide {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 130px;
+}
+
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 32px;
+  font-size: 45px;
+  color: gray;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 32px;
+  font-size: 45px;
+  color: gray;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.slider {
+  position: relative;
+  align-items: center;
+  height: 60vh;
+  width: 60vw;
+}
+
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  margin: 0 3px;
+  cursor: pointer;
+  font-size: 20px;
+}
