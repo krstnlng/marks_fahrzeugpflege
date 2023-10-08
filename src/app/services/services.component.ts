@@ -29,9 +29,9 @@ export class ServicesComponent {
 
   displayedColumns: string[] = ['service', 'price'];
 
-  selectedService: string = '';
+  selectedService = '';
 
-  enteredName: string = '';
+  enteredName = '';
 
   selectedDate: string | undefined = '';
 
@@ -207,7 +207,7 @@ export class ServicesComponent {
     },
   ];
 
-  currentSlideIndex: number = 0;
+  currentSlideIndex = 0;
 
   slideConfig = {
     slidesToShow: 4,
@@ -249,19 +249,19 @@ export class ServicesComponent {
   //   this.slides.length = this.slides.length - 1;
   // }
 
-  slickInit(e: any) {
+  slickInit(e: Event) {
     console.log('slick initialized', e);
   }
 
-  breakpoint(e: any) {
+  breakpoint(e: Event) {
     console.log('breakpoint', e);
   }
 
-  afterChange(e: any) {
+  afterChange(e: Event) {
     console.log('afterChange', e);
   }
 
-  beforeChange(e: any) {
+  beforeChange(e: Event) {
     console.log('beforeChange', e);
   }
 
@@ -317,7 +317,7 @@ export class ServicesComponent {
     }
   }
 
-  generateArrayFromNumber(n: number): any[] {
+  generateArrayFromNumber(n: number): number[] {
     return Array(n).fill(0);
   }
 }
