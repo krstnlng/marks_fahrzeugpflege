@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'marks';
+  email = 'marks@fahrzeugpflege.com';
 
   constructor(private router: Router) {}
 
