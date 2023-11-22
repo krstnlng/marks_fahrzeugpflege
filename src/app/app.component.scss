@@ -20,7 +20,6 @@ li span {
 .logo {
   cursor: pointer;
   margin: 15px 0;
-  width: 0px;
 }
 
 .container-body {
@@ -41,7 +40,11 @@ li span {
   gap: 20px;
   justify-content: space-between;
 }
-@media (max-width: 500px) {
+.header-content {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 550px) {
   .container-header {
     gap: 5px;
   }
@@ -62,6 +65,12 @@ li span {
   }
   h3 {
     margin-top: 15px;
+  }
+  .logo {
+    width: 100px;
+  }
+  .left-div {
+    align-self: center;
   }
 }
 .left-div {
