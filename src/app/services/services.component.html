@@ -62,11 +62,11 @@
                         <span *ngFor="let _ of generateArrayFromNumber(5 - slides[currentSlideIndex].rating)">☆</span>
                         - {{slides[currentSlideIndex].name}}<br><br>
                         <p>{{slides[currentSlideIndex].description}}</p>
-                        <div *ngIf="slides[currentSlideIndex].images">
+                        <!-- <div *ngIf="slides[currentSlideIndex].images">
                             <div *ngFor="let image of slides[currentSlideIndex].images">
                                 <img [src]="image" height="150px" width="350px">
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -81,7 +81,7 @@
         <div class="tab-content-container request-container">
             <div class="request">
                 <div class="form-field">
-                    <mat-form-field appearance="fill">
+                    <mat-form-field>
                         <mat-label>Anfrage zu:</mat-label>
                         <mat-select id="service" [(ngModel)]="selectedService">
                             <mat-option *ngFor="let item of data" [value]="item.service">
@@ -95,18 +95,18 @@
                         <mat-label for="date">Für folgendes Datum:</mat-label>
                         <input #dateInput [min]="today" matInput [matDatepicker]="picker"
                             (dateInput)="addEvent($event)">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
                     </mat-form-field>
                 </div>
                 <div class="form-field">
-                    <mat-form-field appearance="fill">
+                    <mat-form-field>
                         <mat-label>Dein Name</mat-label>
-                        <input matInput [(ngModel)]="enteredName">
+                        <input matInput [(ngModel)]="enteredName" style="border: none">
                     </mat-form-field>
                 </div>
-                <!-- </div>
-            <div class=" conclusion"> -->
+
                 <div style="padding-left: 10px;">
                     <button mat-raised-button (click)=" sendEmail()">
                         <img width="15" height="15" src="https://img.icons8.com/ios/50/mail.png" alt="mail" />
@@ -117,27 +117,25 @@
         </div>
 
         <!-- <mat-form-field>
-                <input matInput placeholder="Anfrage zu..." />
-            </mat-form-field><br>
-            <mat-form-field style="height: 50px;">
-                <mat-label>Anfrage für...</mat-label>
-                <mat-select>
-                    <mat-option *ngFor="let item of data" [value]="item.service">
-                        {{item.service}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field><br> -->
-        <!-- <mat-form-field>
-                <mat-label>Choose a date</mat-label>
-                <input matInput [matDatepicker]="picker">
-                <mat-hint>MM/DD/YYYY</mat-hint>
-                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field> -->
+            <mat-label>Anfrage für...</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let item of data" [value]="item.service">
+                    {{item.service}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field><br>
+        <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Dein Name" />
+        </mat-form-field><br> -->
     </mat-tab>
 </mat-tab-group>
-
-
 
 <!-- <button mat-button [matMenuTriggerFor]="test">eins</button>
 <mat-menu #test="matMenu" yPosition="below">

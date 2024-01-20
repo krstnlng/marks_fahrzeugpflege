@@ -25,7 +25,7 @@ export class ServicesComponent {
 
   // holidays: string[] = ['25.12.2023', '26.12.2023'];
 
-  activeTabIndex = 3;
+  activeTabIndex = 2;
 
   displayedColumns: string[] = ['service', 'price'];
 
@@ -173,18 +173,19 @@ export class ServicesComponent {
   slides = [
     {
       title: 'Empfehlung',
-      name: 'Mark',
+      name: 'dro',
       rating: 5,
       description:
         'Ich habe gestern mein Auto bei Mark abgegeben und bin sehr begeistert. Ich wurde super beraten und der Preis ist auch angemessen. Ich kann es nur weiterempfehlen.',
       services: '',
-      images: ['/assets/img/reviews/review_1.png'],
+      // images: ['/assets/img/reviews/review_1.png'],
     },
     {
       title: 'BEGEISTERT',
-      name: 'Redeker',
+      name: 'anonym',
       rating: 4,
-      description: 'Ich bin sehr zufrieden mit dem Ergebnis!',
+      description:
+        'Ich bin sehr zufrieden mit dem Ergebnis und würde es jedem weiterempfehlen!',
       services: '',
     },
     {
@@ -203,7 +204,7 @@ export class ServicesComponent {
         'Ich kam in der Hoffnung zu Mark, das er meinen Audi A3 wieder im Innenraum gänzen lässt. Nach drei Wochen Urlaub waren überall Verfärbungen in den Sitzen zu erkennen und hinten war etwas ausgelaufen. Ich gab das Auto bei ihm ab und ein paar Stunden später konnte ich meinen Augen nicht trauen! Es sah alles aus wie neu! Die Sitze waren wieder tip top und alles ausgelaufene war einfach weg! Mark gibt sich unglaublich viel Mühe und hat sichtlich Spaß an seiner Arbeit! Ich danke ihn dafür!\n\nPREIS LEISTUNG  TOP',
       services:
         'Shampoonieren von Sitzen, Autoaufbereitung, Staubsaugen des Fahrzeuginnenbereichs',
-      images: ['/assets/img/reviews/review_1.png'],
+      // images: ['/assets/img/reviews/review_1.png'],
     },
   ];
 
@@ -306,14 +307,18 @@ export class ServicesComponent {
   // }
 
   goToNextSlide() {
-    if (this.currentSlideIndex < 3) {
+    if (this.currentSlideIndex < this.slides.length - 1) {
       this.currentSlideIndex++;
+    } else {
+      this.currentSlideIndex = 0;
     }
   }
 
   goToPreviousSlide() {
     if (this.currentSlideIndex > 0) {
       this.currentSlideIndex--;
+    } else {
+      this.currentSlideIndex = this.slides.length - 1;
     }
   }
 
