@@ -25,7 +25,7 @@ export class ServicesComponent {
 
   // holidays: string[] = ['25.12.2023', '26.12.2023'];
 
-  activeTabIndex = 2;
+  activeTabIndex = 0;
 
   displayedColumns: string[] = ['service', 'price'];
 
